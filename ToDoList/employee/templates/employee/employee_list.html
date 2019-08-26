@@ -1,0 +1,58 @@
+{% extends 'employee/base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'employee/form.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+<form class="search" id="search" action="" method="GET">
+  <div class="search_form">
+    <div class="ch">
+      <div class="label">NAME:</div><div class="select">{{form.name}}</div>
+    </div>
+    <div class="ch">
+      <div class="label">DEPARTMENT:</div><div class="select">{{form.department}}</div>
+    </div>
+  </div>
+
+  <a class="btn-square-slant"><input type="submit" value="SEARCH"></a>
+</form>
+
+<div class="list">
+  <form action="" method="get" name="complete_check">
+<div class="add">
+    <input type="submit" value='complete' class="add_btn complete">
+  <a href="{% url 'employee:post' %}"><button type="button" class="add_btn" ><i class="fas fa-plus"></i>Add</button></a>
+</div>
+  <h2 class="title">ToDo List</h2>
+
+  <table class="table table-bordered mt-4">
+    <thead>
+      <tr>
+        <th>✓</th>
+        <th>NAME</th>
+        <th>DEPARTMENT</th>
+        <th>TODO</th>
+        <th>DUE</th>
+        <th>DETAIL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for employee in employee_list %}
+      <tr>
+        <td><input type="checkbox" name="complete" value="{{employee.pk}}"></td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.todo}}</td>
+        <td>{{employee.due}}</td>
+        <td><a href="{% url 'employee:detail' %}">detail</a></td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+  </form>
+  {{complete}}
+</div>
+{% include 'employee/page5.html' %}
+{% endblock %}

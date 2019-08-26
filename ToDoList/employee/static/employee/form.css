@@ -1,0 +1,160 @@
+.form-inline {
+  padding: 5px;
+}
+
+.dropdown button {
+  float: left;
+  margin: 5px 10px;
+}
+
+.form-control {
+  margin: 5px 10px;
+}
+
+/*こっからさいとー*/
+/*テーマカラーコード
+F6F1EC
+D39590
+EB6465
+86908E
+4D3440
+*/
+body{
+  background: #F4F0E6;
+}
+.bg-light{
+  background: #4270CD !important;
+}
+.navbar-brand, .nav-link{
+  color: #FFF !important;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.search{
+  display: inline-block;
+}
+.search_form{
+  float: left;
+}
+.search select{
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  outline:none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  background: none transparent;
+  vertical-align: middle;
+  font-size: inherit;
+  color: inherit;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+.search option{
+  background-color: #fff;
+  color: #333;
+}
+.search select::-ms-expand {
+  display: none;
+}
+.search select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #828c9a;
+}
+
+.label{
+  display: inline-block;
+  width: 150px;
+  margin: 0;
+}
+.select{
+  display: inline-block;
+}
+
+.btn-square-slant input{
+  background-color: transparent;
+  border: None;
+}
+
+.btn-square-slant {
+  float: right;
+  margin-top: 50px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1.4em;
+  text-decoration: none;
+  background: #a0d8ef;/*ボタン色*/
+  color: white;
+  border-bottom: solid 5px #0f445a;/*ボタン色より暗めに*/
+  border-right: solid 5px #0f445a;/*ボタン色より暗めに*/
+}
+
+.btn-square-slant:before {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-width: 0 6px 6px 0px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #FFF;
+}
+
+.btn-square-slant:after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-width: 0px 6px 6px 0px;
+  border-style: solid;
+  border-color: #FFF;
+  border-bottom-color: transparent;
+}
+
+.btn-square-slant:active {
+  /*ボタンを押したとき*/
+  border:none;
+  -webkit-transform: translate(6px,6px);
+  transform: translate(6px,6px);
+}
+
+.btn-square-slant:active:after, .btn-square-slant:active:before {
+  content: none;/*ボタンを押すと線が消える*/
+}
+
+.add_btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #859190;
+  background: #859190;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.add_btn:hover {
+  background: #4270CD;
+  color: white;
+}
+
+.title{
+  float:left;
+}
+.add{
+  float: right;
+}
+.list{
+  margin-top: 50px;
+}
+
+.complete{
+
+}

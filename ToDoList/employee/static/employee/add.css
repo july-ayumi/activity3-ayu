@@ -1,0 +1,68 @@
+body{
+  height: 100%;
+  background: #F4F0E6;  /* fallback for old browsers */
+}
+
+.bg-light{
+  background: #4270CD !important;
+}
+.navbar-brand, .nav-link{
+  color: #FFF !important;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.wrap{
+  margin: 50px;
+}
+
+.btn-square-slant {
+  margin-top: 50px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1.4em;
+  text-decoration: none;
+  background: #a0d8ef;/*ボタン色*/
+  color: white;
+  border-bottom: solid 5px #0f445a;/*ボタン色より暗めに*/
+  border-right: solid 5px #0f445a;/*ボタン色より暗めに*/
+}
+
+.btn-square-slant:before {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-width: 0 6px 6px 0px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #FFF;
+}
+
+.btn-square-slant:after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-width: 0px 6px 6px 0px;
+  border-style: solid;
+  border-color: #FFF;
+  border-bottom-color: transparent;
+}
+
+.btn-square-slant:active {
+  /*ボタンを押したとき*/
+  border:none;
+  -webkit-transform: translate(6px,6px);
+  transform: translate(6px,6px);
+}
+
+.btn-square-slant:active:after, .btn-square-slant:active:before {
+  content: none;/*ボタンを押すと線が消える*/
+}

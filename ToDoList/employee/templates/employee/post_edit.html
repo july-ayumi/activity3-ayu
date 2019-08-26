@@ -1,0 +1,13 @@
+{% extends 'employee/base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'employee/add.css' %}">
+
+<div class="wrap">
+<form method="POST" class="post-form">{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Save</button>
+</form>
+</div>
+{% endblock %}
